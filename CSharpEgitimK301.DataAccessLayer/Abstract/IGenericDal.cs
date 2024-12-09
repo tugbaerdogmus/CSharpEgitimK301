@@ -11,7 +11,7 @@ namespace CSharpEgitimK301.DataAccessLayer.Abstract
         //burada bize merkeziyetli bir sistem sun
         void Insert(T entity);
         void Update(T entity);
-        void Delete(int id);
+        void Delete(T entity);
         List<T> GetAll(); 
         T GetTById(int id);
     }
