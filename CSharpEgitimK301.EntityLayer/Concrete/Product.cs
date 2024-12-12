@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,5 +21,7 @@ namespace CSharpEgitimK301.EntityLayer.Concrete
         //ilişkinin tanımlanabilmesi için
         public List<Order> Orders { get; set; }
         //ilişkiyi oluşturmak iin
+        //[NotMapped]
+        //public string CategoryName { get; set; }
     }
 }

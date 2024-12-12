@@ -22,20 +22,20 @@ namespace CSharpEgitimK301.DataAccessLayer.Repositories
         {
             var deletedEntity=context.Entry(entity);
             deletedEntity.State = EntityState.Deleted;
+            context.SaveChanges();
             /* bu bizim için bir enum olarak geliyor, silme işlemi entityden gelen değere göre yapılır 
               EntityState ekleme silme güncelleme gibi bazı değişikliklere izin veren bir kod bloğu 
              */
-            context.SaveChanges();
         }
 
         public List<T> GetAll()
         {
-            throw new NotImplementedException();
+            return _object.ToList();
         }
 
         public T GetTById(int id)
         {
-            throw new NotImplementedException();
+            return _object.Find(id);
         }
 
         public void Insert(T entity)
